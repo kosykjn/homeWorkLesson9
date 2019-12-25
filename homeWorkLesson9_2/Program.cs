@@ -10,9 +10,15 @@ namespace homeWorkLesson9_2
     {
         static void Main(string[] args)
         {
-            var player = new Player();
-            player.Play();
-            player.Record();
+            IRecordable player1 = new Player();
+            player1.Record();
+            player1.Pause();
+            player1.Stop();
+
+            IPlayable player2 = new Player();
+            player2.Play();
+            player2.Pause();
+            player2.Stop();
 
             Console.ReadKey();
         }

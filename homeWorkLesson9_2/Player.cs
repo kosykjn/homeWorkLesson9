@@ -13,14 +13,24 @@ namespace homeWorkLesson9_2
         {
             Console.WriteLine("Идет запись...");
         }
-        public void Pause()
+        void IRecordable.Pause()
         {
-            Console.WriteLine("Пауза...");
+            Console.WriteLine("Пауза (записи)...");
         }
 
-        public void Stop()
+        void IRecordable.Stop()
         {
-            Console.WriteLine("Остановлен...");
+            Console.WriteLine("Остановка (записи)...");
+        }
+
+        void IPlayable.Pause()
+        {
+            Console.WriteLine("Пауза (проигрывания)...");
+        }
+
+        void IPlayable.Stop()
+        {
+            Console.WriteLine("Остановка (проигрывания)...");
         }
     }
 }
